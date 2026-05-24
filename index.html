@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Sabarimala Devotional Playlist</title>
+    <link rel="icon" href="https://www.spotify.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <div class="logo" id="sidebar-logo">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.563.387-.857.207-2.35-1.438-5.305-1.764-8.785-.97-.337.077-.67-.138-.747-.475-.077-.337.138-.67.475-.747 3.81-.87 7.078-.495 9.71 1.115.293.18.385.563.204.87zm1.224-2.723c-.226.367-.707.487-1.074.26-2.69-1.653-6.79-2.13-9.97-1.164-.41.125-.845-.107-.97-.518-.125-.41.107-.845.518-.97 3.633-1.102 8.147-.568 11.233 1.328.368.227.487.707.263 1.074zm.105-2.82c-3.224-1.914-8.54-2.09-11.618-1.156-.496.15-1.02-.128-1.17-.624-.15-.496.128-1.02.624-1.17 3.555-1.08 9.426-.874 13.13 1.327.447.266.594.84.327 1.287-.267.447-.84.594-1.287.327z"/>
+                    </svg>
+                    <span>Spotify</span>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#" class="nav-item active" id="nav-home">
+                                <svg viewBox="0 0 24 24"><path d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"/></svg>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-item" id="nav-search">
+                                <svg viewBox="0 0 24 24"><path d="M10.533 1.277c-4.949 0-8.96 4.01-8.96 8.96 0 4.948 4.01 8.959 8.96 8.959 2.11 0 4.047-.73 5.586-1.955l4.316 4.316a1 1 0 0 0 1.414-1.414l-4.316-4.316c1.226-1.54 1.96-3.477 1.96-5.59 0-4.95-4.01-8.96-8.96-8.96zm-6.96 8.96c0-3.844 3.116-6.96 6.96-6.96 3.844 0 6.96 3.116 6.96 6.96 0 3.844-3.116 6.96-6.96 6.96-3.844 0-6.96-3.116-6.96-6.96z"/></svg>
+                                <span>Search</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Library Container -->
+            <div class="library-panel">
+                <div class="library-header">
+                    <div class="library-title" id="lib-title-btn">
+                        <svg viewBox="0 0 24 24"><path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 1 16.5 1h1a1 1 0 0 1 1 1v21a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V2.134zM8 3a1 1 0 0 1 1-1h1.5a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V3z"/></svg>
+                        <span>Your Library</span>
+                    </div>
+                    <button class="add-button" title="Create playlist" id="create-playlist-btn">
+                        <svg viewBox="0 0 16 16"><path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/><path d="M11.75 7.25h-3v-3h-1.5v3h-3v1.5h3v3h1.5v-3h3v-1.5z"/></svg>
+                    </button>
+                </div>
+                <div class="library-content" id="library-playlists">
+                    <!-- Dynamic Libraries Rendering -->
+                    <div class="playlist-item active" id="lib-playlist-all">
+                        <img src="assets/sabarimala_playlist.png" alt="Sabarimala Devotional Hits" class="playlist-img">
+                        <div class="playlist-info">
+                            <span class="playlist-name">Sabarimala Hits</span>
+                            <span class="playlist-desc">Playlist • Devotional</span>
+                        </div>
+                    </div>
+                    <div class="playlist-item" id="lib-playlist-favourites">
+                        <img src="assets/favourite_songs_playlist.png" alt="Favourite songs" class="playlist-img">
+                        <div class="playlist-info">
+                            <span class="playlist-name">Favourite songs</span>
+                            <span class="playlist-desc">Playlist • Melodies & Gold</span>
+                        </div>
+                    </div>
+                    <div class="playlist-item" id="lib-playlist-liked">
+                        <div class="playlist-img" style="background: linear-gradient(135deg, #450af5, #c4efd9); display: flex; align-items: center; justify-content: center;">
+                            <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: white;"><path d="M8.667 1.912c-.852 0-1.632.32-2.222.862A3.945 3.945 0 0 0 2 6.5c0 1.25.5 2.455 1.379 3.336L12 18.5l8.621-8.664c.88-.88 1.379-2.086 1.379-3.336a3.945 3.945 0 0 0-4.445-3.726 3.903 3.903 0 0 0-2.822 1.336L12 6.257l-2.733-2.93a3.92 3.92 0 0 0-2.6-.415z"/></svg>
+                        </div>
+                        <div class="playlist-info">
+                            <span class="playlist-name">Liked Songs</span>
+                            <span class="playlist-desc">Playlist • <span id="liked-count-sidebar">0</span> songs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace Area -->
+        <main class="main-content">
+            <!-- Top Sticky Bar -->
+            <header class="main-header">
+                <div class="header-navigation">
+                    <button class="nav-arrow" title="Go back" id="btn-back">
+                        <svg viewBox="0 0 24 24"><path d="M15.957 5.457a1 1 0 0 1 0 1.414L10.781 12l5.176 5.129a1 1 0 0 1-1.414 1.414L8.65 12.707a1 1 0 0 1 0-1.414l5.893-5.836a1 1 0 0 1 1.414 0z"/></svg>
+                    </button>
+                    <button class="nav-arrow" title="Go forward" id="btn-forward">
+                        <svg viewBox="0 0 24 24"><path d="M8.043 5.457a1 1 0 0 0 0 1.414L13.219 12l-5.176 5.129a1 1 0 1 0 1.414 1.414l5.893-5.836a1 1 0 0 0 0-1.414L9.457 5.457a1 1 0 0 0-1.414 0z"/></svg>
+                    </button>
+
+                    <!-- Search Input Box -->
+                    <div class="search-container" id="header-search-bar">
+                        <div class="search-icon">
+                            <svg viewBox="0 0 24 24"><path d="M10.533 1.277c-4.949 0-8.96 4.01-8.96 8.96 0 4.948 4.01 8.959 8.96 8.959 2.11 0 4.047-.73 5.586-1.955l4.316 4.316a1 1 0 0 0 1.414-1.414l-4.316-4.316c1.226-1.54 1.96-3.477 1.96-5.59 0-4.95-4.01-8.96-8.96-8.96zm-6.96 8.96c0-3.844 3.116-6.96 6.96-6.96 3.844 0 6.96 3.116 6.96 6.96 0 3.844-3.116 6.96-6.96 6.96-3.844 0-6.96-3.116-6.96-6.96z"/></svg>
+                        </div>
+                        <input type="text" class="search-input" id="search-input-el" placeholder="What do you want to play?" autocomplete="off">
+                        <button class="clear-search-btn" id="search-clear-btn" title="Clear search">
+                            <svg viewBox="0 0 16 16"><path d="M1.47 1.47a.75.75 0 0 1 1.06 0L8 6.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L9.06 8l5.47 5.47a.75.75 0 1 1-1.06 1.06L8 9.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L6.94 8 1.47 2.53a.75.75 0 0 1 0-1.06z"/></svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="header-user" id="user-profile">
+                    <div class="user-avatar">S</div>
+                    <span class="user-name">Sabarimala Pilgrim</span>
+                </div>
+            </header>
+
+            <!-- Playlist Hero Banner -->
+            <div class="playlist-banner" id="playlist-hero-banner">
+                <img src="assets/sabarimala_playlist.png" alt="Sabarimala Devotional Hits" class="banner-cover" id="banner-cover-image">
+                <div class="banner-content">
+                    <span class="banner-type" id="banner-playlist-type">Public Playlist</span>
+                    <h1 class="banner-title" id="banner-playlist-title">Sabarimala Devotional Hits</h1>
+                    <p class="banner-desc" id="banner-playlist-desc">Lord Ayyappan, Karuppasamy and Ganapathi devotional masterpieces. Exact Spotify experience with full audio controls, dynamic search, and interactive libraries.</p>
+                    <div class="banner-meta">
+                        <svg class="spotify-icon-meta" viewBox="0 0 24 24">
+                            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.563.387-.857.207-2.35-1.438-5.305-1.764-8.785-.97-.337.077-.67-.138-.747-.475-.077-.337.138-.67.475-.747 3.81-.87 7.078-.495 9.71 1.115.293.18.385.563.204.87zm1.224-2.723c-.226.367-.707.487-1.074.26-2.69-1.653-6.79-2.13-9.97-1.164-.41.125-.845-.107-.97-.518-.125-.41.107-.845.518-.97 3.633-1.102 8.147-.568 11.233 1.328.368.227.487.707.263 1.074zm.105-2.82c-3.224-1.914-8.54-2.09-11.618-1.156-.496.15-1.02-.128-1.17-.624-.15-.496.128-1.02.624-1.17 3.555-1.08 9.426-.874 13.13 1.327.447.266.594.84.327 1.287-.267.447-.84.594-1.287.327z"/>
+                        </svg>
+                        <span>Spotify Clone</span>
+                        <span class="light-text">• <span id="banner-song-count">4</span> songs,</span>
+                        <span class="light-text" id="banner-total-duration">about 21 min 8 sec</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Actions (Play, Favorite/Heart) -->
+            <div class="playlist-actions">
+                <button class="play-action-btn" id="banner-play-btn" title="Play playlist">
+                    <svg viewBox="0 0 24 24" id="banner-play-icon"><path d="M7.05 3.606l13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"/></svg>
+                </button>
+                <button class="favorite-playlist-btn" id="banner-fav-btn" title="Add to Your Library">
+                    <svg viewBox="0 0 24 24"><path d="M8.667 1.912c-.852 0-1.632.32-2.222.862A3.945 3.945 0 0 0 2 6.5c0 1.25.5 2.455 1.379 3.336L12 18.5l8.621-8.664c.88-.88 1.379-2.086 1.379-3.336a3.945 3.945 0 0 0-4.445-3.726 3.903 3.903 0 0 0-2.822 1.336L12 6.257l-2.733-2.93a3.92 3.92 0 0 0-2.6-.415z"/></svg>
+                </button>
+            </div>
+
+            <!-- Song List Section -->
+            <section class="songs-section">
+                <table class="song-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center;">#</th>
+                            <th>Title</th>
+                            <th class="col-album-header">Album</th>
+                            <th style="text-align: right; padding-right: 28px;">
+                                <svg viewBox="0 0 16 16" style="width: 16px; height: 16px; fill: var(--text-secondary);"><path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/><path d="M8 3.25a.75.75 0 0 1 .75.75v3.25H11a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75V4a.75.75 0 0 1 .75-.75z"/></svg>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="songs-list-body">
+                        <!-- Populated dynamically via JS -->
+                    </tbody>
+                </table>
+
+                <!-- Empty Search State -->
+                <div class="empty-search-state" id="search-empty-view">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M10.533 1.277c-4.949 0-8.96 4.01-8.96 8.96 0 4.948 4.01 8.959 8.96 8.959 2.11 0 4.047-.73 5.586-1.955l4.316 4.316a1 1 0 0 0 1.414-1.414l-4.316-4.316c1.226-1.54 1.96-3.477 1.96-5.59 0-4.95-4.01-8.96-8.96-8.96zm-6.96 8.96c0-3.844 3.116-6.96 6.96-6.96 3.844 0 6.96 3.116 6.96 6.96 0 3.844-3.116 6.96-6.96 6.96-3.844 0-6.96-3.116-6.96-6.96z"/>
+                    </svg>
+                    <span class="empty-search-title">No results found for "<span id="search-query-highlight"></span>"</span>
+                    <span class="empty-search-subtitle">Please make sure your words are spelled correctly, or use fewer or different keywords.</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Music Player Bottom Footer Control Bar -->
+    <footer class="player-footer">
+        <!-- Left panel - Active Track Info -->
+        <div class="footer-left">
+            <img src="assets/sabarimala_playlist.png" alt="Sabarimala Devotional Cover" class="now-playing-cover" id="footer-player-cover">
+            <div class="now-playing-info">
+                <span class="now-playing-title" id="footer-player-title">Select a song to play</span>
+                <span class="now-playing-artist" id="footer-player-artist">Artist</span>
+            </div>
+            <button class="now-playing-like" id="footer-player-like-btn" title="Save to Your Library">
+                <svg viewBox="0 0 24 24"><path d="M8.667 1.912c-.852 0-1.632.32-2.222.862A3.945 3.945 0 0 0 2 6.5c0 1.25.5 2.455 1.379 3.336L12 18.5l8.621-8.664c.88-.88 1.379-2.086 1.379-3.336a3.945 3.945 0 0 0-4.445-3.726 3.903 3.903 0 0 0-2.822 1.336L12 6.257l-2.733-2.93a3.92 3.92 0 0 0-2.6-.415z"/></svg>
+            </button>
+        </div>
+
+        <!-- Center panel - Main Controls (Play, Prev, Next, Progress Slider) -->
+        <div class="footer-center">
+            <div class="player-controls">
+                <button class="control-btn" id="ctrl-shuffle" title="Enable shuffle">
+                    <svg viewBox="0 0 24 24"><path d="M18.254 18.254a1 1 0 0 0 1.414 0l3-3a1 1 0 0 0 0-1.414l-3-3a1 1 0 0 0-1.414 1.414l1.293 1.293H16.5a4.5 4.5 0 0 1-3.69-1.928l-1.077-1.507A6.5 6.5 0 0 0 6.5 8H3.5a1 1 0 0 0 0 2h3a4.5 4.5 0 0 1 3.69 1.928l1.077 1.507a6.5 6.5 0 0 0 5.233 2.565h3.043l-1.293 1.293a1 1 0 0 0 0 1.414zM18.254 5.746a1 1 0 0 0 0 1.414l1.293 1.293H16.5a6.5 6.5 0 0 0-5.233 2.565l-1.077 1.507A4.5 4.5 0 0 1 6.5 14h-3a1 1 0 0 0 0 2h3a6.5 6.5 0 0 0 5.233-2.565l1.077-1.507a4.5 4.5 0 0 1 3.69-1.928h3.043l-1.293 1.293a1 1 0 0 0 1.414 1.414l3-3a1 1 0 0 0 0-1.414l-3-3a1 1 0 0 0-1.414 0z"/></svg>
+                </button>
+                <button class="control-btn" id="ctrl-prev" title="Previous song">
+                    <svg viewBox="0 0 24 24"><path d="M12.7 12.7l8.285 5.706A.5.5 0 0 0 21.75 18V6a.5.5 0 0 0-.765-.418L12.7 11.3a.5.5 0 0 0 0 .8l-.01.01zm-9.75.3a.5.5 0 0 0 0-.8L11.235 6.5A.5.5 0 0 0 12 6.918V17.08a.5.5 0 0 0-.765.419L2.95 13z"/></svg>
+                </button>
+                <button class="control-btn btn-play-pause" id="ctrl-play-pause" title="Play / Pause">
+                    <svg viewBox="0 0 24 24" id="footer-play-icon"><path d="M7.05 3.606l13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"/></svg>
+                </button>
+                <button class="control-btn" id="ctrl-next" title="Next song">
+                    <svg viewBox="0 0 24 24"><path d="M11.3 11.3L3.015 5.594A.5.5 0 0 0 2.25 6v12a.5.5 0 0 0 .765.418L11.3 12.7a.5.5 0 0 0 0-.8l.01-.01zm9.75-.3a.5.5 0 0 0 0 .8l-8.285 5.706A.5.5 0 0 0 12 17.082V6.918a.5.5 0 0 0 .765-.419L21.05 11z"/></svg>
+                </button>
+                <button class="control-btn" id="ctrl-repeat" title="Enable repeat">
+                    <svg viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+                </button>
+            </div>
+            <div class="playback-bar">
+                <span class="time-display" id="time-current">0:00</span>
+                <div class="slider-container" id="playback-slider">
+                    <div class="slider-progress" id="playback-progress" style="width: 0%;"></div>
+                    <div class="slider-handle" id="playback-handle" style="left: 0%;"></div>
+                </div>
+                <span class="time-display" id="time-total">0:00</span>
+            </div>
+        </div>
+
+        <!-- Right panel - Volume and Queue Controls -->
+        <div class="footer-right">
+            <button class="utility-btn" title="Queue" id="btn-queue">
+                <svg viewBox="0 0 24 24"><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zm9 4H3v2h21v-2zm-3-4h-3v2h3V7zm0 8h-3v2h3v-2z"/></svg>
+            </button>
+            <button class="utility-btn" title="Mute / Unmute" id="btn-mute">
+                <svg viewBox="0 0 24 24" id="volume-icon"><path d="M16.617 1.956a1 1 0 0 0-1.242.418L8.685 11H3.5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5.185l6.69 8.626A1 1 0 0 0 17 23V2a1 1 0 0 0-.383-.804zM15 20.354L9.805 13.66A1 1 0 0 0 9 13H4.5v-1H9a1 1 0 0 0 .805-.66L15 4.646v15.708zM22.023 6.953a1 1 0 1 0-1.414 1.414 6 6 0 0 1 0 8.486 1 1 0 1 0 1.414 1.414 8 8 0 0 0 0-11.314z"/></svg>
+            </button>
+            <div class="volume-bar">
+                <div class="slider-container" id="volume-slider">
+                    <div class="slider-progress" id="volume-progress" style="width: 80%;"></div>
+                    <div class="slider-handle" id="volume-handle" style="left: 80%;"></div>
+                </div>
+            </div>
+            <button class="utility-btn" title="Fullscreen" id="btn-fullscreen">
+                <svg viewBox="0 0 24 24"><path d="M6.25 3A3.25 3.25 0 0 0 3 6.25v3a.75.75 0 0 0 1.5 0v-3C4.5 5.075 5.075 4.5 6.25 4.5h3a.75.75 0 0 0 0-1.5h-3zm11.5 0a.75.75 0 0 0 0 1.5h3c1.175 0 1.75.575 1.75 1.75v3a.75.75 0 0 0 1.5 0v-3A3.25 3.25 0 0 0 20.75 3h-3zm-11.5 16.5a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3A3.25 3.25 0 0 0 3 17.75v-3a.75.75 0 0 0-1.5 0v3A3.25 3.25 0 0 0 6.25 19.5h11.5a.75.75 0 0 0 0-1.5h-3a.75.75 0 0 0 0 1.5h3c1.175 0 1.75-.575 1.75-1.75v-3a.75.75 0 0 0-1.5 0v3a3.25 3.25 0 0 0-3.25 3.25z"/></svg>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Hidden HTML5 Audio Element -->
+    <audio id="main-audio-element" preload="auto"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
